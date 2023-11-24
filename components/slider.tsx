@@ -10,14 +10,25 @@ import "swiper/css/scrollbar";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { urlForImage } from "@/sanity/lib/image";
+import { getSliderImages } from "@/sanity/sanity.query";
+import { useEffect, useState } from "react";
 
-export default function Slider({ images }: { images: any[] }) {
+interface SliderProps {
+  image: {
+    image: {
+      asset: {
+        _ref: string;
+      };
+      _type: string;
+    };
+  };
+}
+
+export default function Slider({ images }: { images: SliderProps[] }) {
   return (
     <Swiper
       slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
       modules={[Autoplay]}
-      onSwiper={(swiper) => console.log(swiper)}
       className="flex w-full h-full max-w-4xl"
       autoplay={{
         delay: 3000,
@@ -25,13 +36,13 @@ export default function Slider({ images }: { images: any[] }) {
       }}
       loop={true}
     >
-      {images?.map((image, i) => (
-        <SwiperSlide key={i} className="w-full h-full">
+      {images?.map((item: any, i: number) => (
+        <SwiperSlide key={i} className="w-full h-full bg-yellow-400 text-white">
           <Image
-            src={urlForImage(image.image).url() || ""}
-            alt=""
-            fill
-            priority
+            src={urlForImage(item.image).url()}
+            alt="image"
+            width={1000}
+            height={1000}
             className="aspect-square w-full h-full object-cover"
           />
         </SwiperSlide>

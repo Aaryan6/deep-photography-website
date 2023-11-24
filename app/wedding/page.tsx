@@ -10,7 +10,7 @@ export default async function page() {
   ];
   return (
     <section className="max-w-7xl mx-auto">
-      <div className="py-10 px-4 grid justify-center">
+      <div className="py-10 px-8 grid justify-center">
         <h1 className="text-3xl text-white">Wedding Shoots</h1>
       </div>
       <div className="mt-4 md:mt-10">

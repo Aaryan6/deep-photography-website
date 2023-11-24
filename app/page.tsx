@@ -20,9 +20,9 @@ export default async function Home() {
                 Deepak Yadav
               </h3>
               <h1
-                className={`${lightfont.className} font-light text-4xl md:text-6xl`}
+                className={`${lightfont.className} font-light text-4xl md:text-6xl uppercase md:leading-snug`}
               >
-                PHOTOGRAPHY STUDIO
+                Deep Photo art photography
               </h1>
             </div>
             <Link href={"/contact"}>

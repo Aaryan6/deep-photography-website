@@ -6,7 +6,12 @@ export default function Footer() {
       </div>
       <div className="flex gap-x-6">
         <p>+91 89649 88220</p>
-        <p>Instagram</p>
+        <a
+          href="https://instagram.com/photography_deepak_yadav?utm_source=qr&igshid=MThlNWY1MzQwNA=="
+          target="_blank"
+        >
+          Instagram
+        </a>
       </div>
     </div>
   );
