@@ -40,46 +40,38 @@ export default function page() {
             </svg>
             Instagram
           </a>
-          <p className="mt-3">+91 89649 88220</p>
+          <a
+            href="https://www.facebook.com/profile.php?id=100009301597233&mibextid=ZbWKwL"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${lightfont.className} text-xl mt-2 flex gap-x-3 cursor-pointer`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-facebook"
+            >
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+            Facebook
+          </a>
+          <a
+            href="mailto:deepakyadavyadav813@gmail.com"
+            className={`text-gray-100 mt-8`}
+          >
+            deepakyadavyadav813@gmail.com
+          </a>
+          <p className="mt-0">+91 89649 88220</p>
         </div>
       </div>
-      <div className="md:w-1/2">
-        <form className="grid gap-y-8 w-full max-w-lg mx-auto md:mx-0">
-          <div className="grid gap-y-2">
-            <label htmlFor="">Name</label>
-            <input
-              type="text"
-              className="bg-transparent text-white border-b border-b-white outline-none py-2"
-              placeholder="John Doe"
-            />
-          </div>
-          <div className="grid gap-y-2">
-            <label htmlFor="">Email</label>
-            <input
-              type="email"
-              className="bg-transparent text-white border-b border-b-white outline-none py-2"
-              placeholder="john@doe.com"
-            />
-          </div>
-          <div className="grid gap-y-2">
-            <label htmlFor="">Message</label>
-            <textarea
-              name=""
-              id=""
-              cols={30}
-              rows={5}
-              className="bg-transparent text-white border-b border-b-white resize-none outline-none py-2"
-              placeholder="Hi!"
-            ></textarea>
-          </div>
-          <Button
-            type="submit"
-            className="bg-white text-black rounded-none hover:bg-gray-400"
-          >
-            Submit
-          </Button>
-        </form>
-      </div>
+      <div className="md:w-1/2"></div>
     </section>
   );
 }

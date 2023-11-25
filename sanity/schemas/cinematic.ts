@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
-const Cinematic = defineType({
-  name: "cinematic",
-  title: "Cinematic", // name of the model
+const CinematicShoot = defineType({
+  name: "cinematic-shoot",
+  title: "Cinematic Shoot", // name of the model
   type: "document",
   fields: [
     {
@@ -22,4 +22,4 @@ const Cinematic = defineType({
   },
 });
 
-export default Cinematic;
+export default CinematicShoot;

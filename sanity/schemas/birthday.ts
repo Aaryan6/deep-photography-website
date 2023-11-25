@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
-const PreWeddingShoot = defineType({
-  name: "pre-wedding-shoot",
-  title: "Pre-Wedding Shoot", // name of the model
+const BirthdayShoot = defineType({
+  name: "birthday-shoot",
+  title: "Birthday Shoot", // name of the model
   type: "document",
   fields: [
     {
@@ -22,4 +22,4 @@ const PreWeddingShoot = defineType({
   },
 });
 
-export default PreWeddingShoot;
+export default BirthdayShoot;

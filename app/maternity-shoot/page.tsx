@@ -1,5 +1,10 @@
 import ImageGridLayout from "@/components/ImageGridLayout";
-import { getMaternityImages } from "@/sanity/sanity.query";
+import Heading from "@/components/heading";
+import HorizontalSlider from "@/components/horizontal-slider";
+import {
+  getMaternityImages,
+  getPagesSliderImages,
+} from "@/sanity/sanity.query";
 
 export default async function page() {
   const wedding_images = await getMaternityImages();
@@ -8,11 +13,16 @@ export default async function page() {
     wedding_images.slice(0, groupSize),
     wedding_images.slice(groupSize, groupSize * 2),
   ];
+  const slider_images = await getPagesSliderImages();
+  const filter_images = slider_images.filter(
+    (image: any) => image.type === "maternity"
+  );
   return (
     <section className="max-w-7xl mx-auto">
-      <div className="py-10 px-4 grid justify-center">
-        <h1 className="text-3xl text-white">Maternity Shoots</h1>
+      <div className="mb-4 px-2">
+        <HorizontalSlider images={filter_images} />
       </div>
+      <Heading>Maternity Shoots</Heading>
       <div className="mt-10">
         <ImageGridLayout groups={groups} />
       </div>

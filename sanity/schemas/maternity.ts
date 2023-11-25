@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
-const Maternity = defineType({
-  name: "maternity",
-  title: "Maternity", // name of the model
+const MaternityShoot = defineType({
+  name: "maternity-shoot",
+  title: "Maternity Shoot", // name of the model
   type: "document",
   fields: [
     {
@@ -22,4 +22,4 @@ const Maternity = defineType({
   },
 });
 
-export default Maternity;
+export default MaternityShoot;
