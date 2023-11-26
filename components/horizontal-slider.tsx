@@ -39,10 +39,7 @@ export default function HorizontalSlider({
       loop={true}
     >
       {images?.map((item: any, i: number) => (
-        <SwiperSlide
-          key={i}
-          className="w-full h-full bg-yellow-400 text-white relative"
-        >
+        <SwiperSlide key={i} className="w-full h-full relative">
           <Image
             src={urlForImage(item.image).url()}
             alt="image"

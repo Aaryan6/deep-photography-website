@@ -82,3 +82,11 @@ export async function getPagesSliderImages() {
     }`
   );
 }
+
+export async function getGadgetsImages() {
+  return client.fetch(
+    groq`*[_type == "gadgets"]{
+      image
+    }`
+  );
+}
