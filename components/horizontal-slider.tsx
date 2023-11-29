@@ -41,9 +41,10 @@ export default function HorizontalSlider({
       {images?.map((item: any, i: number) => (
         <SwiperSlide key={i} className="w-full h-full relative">
           <Image
-            src={urlForImage(item.image).url()}
+            src={urlForImage(item.image)}
             alt="image"
             fill
+            priority={true}
             className="w-full h-full object-cover"
           />
         </SwiperSlide>

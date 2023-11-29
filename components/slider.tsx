@@ -37,7 +37,7 @@ export default function Slider({ images }: { images: SliderProps[] }) {
       {images?.map((item: any, i: number) => (
         <SwiperSlide key={i} className="w-full h-full">
           <Image
-            src={urlForImage(item.image).url()}
+            src={urlForImage(item.image)}
             alt="image"
             width={1000}
             height={1000}

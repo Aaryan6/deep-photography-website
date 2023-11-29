@@ -26,7 +26,7 @@ export default function ImageGridLayout({ groups }: any) {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={urlForImage(item.image).url() as string}
+                src={urlForImage(item.image) || ""}
                 alt=""
                 loading="lazy"
                 className="w-full h-full hover:scale-105 hover:brightness-75 transform transition-all duration-300"

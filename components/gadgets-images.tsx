@@ -30,7 +30,7 @@ export default function GadgetsImages({ images }: ImageProps) {
       className="bg-white h-96 relative"
     >
       <Image
-        src={urlForImage(item.image).url()}
+        src={urlForImage(item.image)}
         alt=""
         fill
         className="w-full h-full object-cover"
